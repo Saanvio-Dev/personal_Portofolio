@@ -1,0 +1,129 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 15px;
+  }
+  
+  .owl-carousel-o .owl-item {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .project-slide {
+    background-color: rgba(23, 23, 23, 0.7); /* Transparent black background for contrast */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 350px; /* Set the height to a fixed value */
+    width: 100%; /* Ensure the width takes the available space */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; 
+  
+    /* Uniform Width for Consistency */
+    flex: 1;
+    min-width: 280px; /* Minimum width for responsiveness */
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  .project-content {
+    padding: 30px;
+    text-align: center;
+    color: #fff; /* White text for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    .project-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #007bff; /* Blue color for titles */
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #500101; /* Subtle hover effect */
+      }
+    }
+  
+    .project-description {
+      font-size: 1rem;
+      color: #bbb;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+  
+    .btn-view-project {
+      background-color: #500101;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #04192D; /* Hover effect on button */
+      }
+    }
+  }
+  
+  .owl-carousel-o .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .owl-carousel-o .owl-nav .owl-prev,
+  .owl-carousel-o .owl-nav .owl-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .owl-carousel-o .owl-nav .owl-prev:hover,
+  .owl-carousel-o .owl-nav .owl-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  @media (max-width: 768px) {
+    .project-slide {
+      height: 300px; /* Adjust card height for smaller screens */
+    }
+  
+    .project-title {
+      font-size: 1.5rem;
+    }
+    .project-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-title {
+      font-size: 1.3rem;
+    }
+    .project-description {
+      font-size: 0.85rem;
+    }
+  
+    .btn-view-project {
+      font-size: 0.9rem;
+      padding: 8px 18px;
+    }
+  }
+  
